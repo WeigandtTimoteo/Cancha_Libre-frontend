@@ -4,7 +4,7 @@ import { Matchmaking } from './pages/Matchmaking';
 import { RegistroPartidos } from './pages/RegistroPartidos'; // Nueva página
 import { Navbar } from './components/navbar/navbar';
 
-function App() {
+export default function App() {
   return (
     <div className="min-h-screen bg-background text-slate-300 font-sans">
       <Navbar />

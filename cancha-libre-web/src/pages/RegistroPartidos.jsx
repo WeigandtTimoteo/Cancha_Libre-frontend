@@ -1,13 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import { MatchCard } from '../components/MatchCard';
+import { MatchCard } from '../components/cards/MatchCard/MatchCard';
 import { History } from 'lucide-react';
 
 export const RegistroPartidos = () => {
   const { data: partidos, isLoading, error } = useQuery({
     queryKey: ['partidos-archivo'],
     queryFn: () => axios.get('http://localhost:8000/api/partidos-ar/').then(res => res.data),
-    staleTime: 1000 * 60 * 60, // Datos históricos: 1 hora de caché
+    staleTime: 1000 * 60 * 120,
   });
 
   return (
